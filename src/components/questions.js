@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import _ from 'lodash';
+import { increment, total_questions } from '../actions/index';
 import { Text, View } from 'react-native';
 import Button from 'react-native-button';
-import { increment, total_questions } from '../actions/index';
 import styles from '../Style.js';
+import _ from 'lodash';
 
 const Entities = require('html-entities').AllHtmlEntities;
 

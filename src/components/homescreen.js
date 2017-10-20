@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { reset } from '../actions/index';
 import Button from 'react-native-button';
 import styles from '../Style.js';
-import { reset } from '../actions/index';
 
 export class HomeScreen extends Component {
 

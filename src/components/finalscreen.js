@@ -2,25 +2,25 @@ import React, { Component } from 'react';
 import { Text, View, BackHandler } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Button from 'react-native-button';
 import { reset } from '../actions/index';
 import styles from '../Style.js';
+import Button from 'react-native-button';
 
 export class FinalScreen extends Component {
   constructor(props) {
     super(props);
-    this._backPress = this._backPress.bind(this);
+    this.onBackPress = this.onBackPress.bind(this);
   }
 
   componentDidMount() {
-    BackHandler.addEventListener('hardwareBackPress', this._backPress);
+    BackHandler.addEventListener('hardwareBackPress', this.onBackPress);
   }
 
   componentWillUnmount() {
-    BackHandler.removeEventListener('hardwareBackPress', this._backPress);
+    BackHandler.removeEventListener('hardwareBackPress', this.onBackPress);
   }
 
-  _backPress() {
+  onBackPress() {
     this.props.navigation.navigate('Home');
     return true;
   }
