@@ -7,7 +7,7 @@ import Button from 'react-native-button';
 import { increment, total_questions } from '../actions/index';
 import styles from '../Style.js';
 
-const Entities = require('html-entities').XmlEntities;
+const Entities = require('html-entities').AllHtmlEntities;
 
 export class QuestionsScreen extends Component {
   constructor(props) {
