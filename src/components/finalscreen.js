@@ -10,10 +10,17 @@ export class FinalScreen extends Component {
   constructor(props) {
     super(props);
     this.onBackPress = this.onBackPress.bind(this);
+
+    this.state = {
+      message: ''
+    }
   }
 
   componentDidMount() {
     BackHandler.addEventListener('hardwareBackPress', this.onBackPress);
+    if (this.props.totals.answers_total == this.props.totals.total_questions) {
+      this.setState({message: 'Perfect Score!'});
+    }
   }
 
   componentWillUnmount() {
@@ -39,6 +46,7 @@ export class FinalScreen extends Component {
           <Text style={styles.title_item}>You scored {this.props.totals.answers_total} / {this.props.totals.total_questions}</Text>
         </View>
         <View style={styles.body_container}>
+          <Text style={styles.body_item}>{this.state.message}</Text>
           <Text style={styles.body_item}>Want to try again?</Text>
         </View>
         <View style={styles.footer_container}>
