@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, BackHandler } from 'react-native';
+import { Text, View, BackHandler } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Button from 'react-native-button';
@@ -20,7 +20,7 @@ export class FinalScreen extends Component {
     BackHandler.removeEventListener('hardwareBackPress', this._backPress);
   }
 
-  _backPress() {    
+  _backPress() {
     this.props.navigation.navigate('Home');
     return true;
   }

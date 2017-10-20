@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import _ from 'lodash';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 import Button from 'react-native-button';
 import { increment, total_questions } from '../actions/index';
 import styles from '../Style.js';
@@ -51,7 +51,7 @@ export class QuestionsScreen extends Component {
 
   // Determine what to do after the user answers a question
   onNextQuestion(answer) {
-    // Convert the text string from the API to a boolean values
+    // Convert the text string from the API to a boolean value
     let correct_answer = (this.state.questions[this.state.current_question].correct_answer == "True");
 
     // If they got a correct answer, change the app state
@@ -65,7 +65,7 @@ export class QuestionsScreen extends Component {
   }
 
   render() {
-    // If the questions array is empty, fetch has not returned anything yet
+    // If the questions array is empty, fetch has not returned anything yet or there was an error
     if (_.isEmpty(this.state.questions)) {
       return (
         <View style={styles.loading_container}>
