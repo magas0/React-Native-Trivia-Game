@@ -18,6 +18,8 @@ export class FinalScreen extends Component {
 
   componentDidMount() {
     BackHandler.addEventListener('hardwareBackPress', this.onBackPress);
+
+    // Did they win?
     if (this.props.totals.answers_total == this.props.totals.total_questions) {
       this.setState({message: 'Perfect Score!'});
     }
@@ -27,6 +29,8 @@ export class FinalScreen extends Component {
     BackHandler.removeEventListener('hardwareBackPress', this.onBackPress);
   }
 
+  // If they hit the back button here, navigate home where the answer
+  // count will be reset
   onBackPress() {
     this.props.navigation.navigate('Home');
     return true;
