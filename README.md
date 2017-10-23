@@ -1,7 +1,14 @@
-Trivia Game Coding Challenge
-This simple game will pull 10 true or false questions to answer. Your score will be displayed at the end.
+##Trivia Game Coding Challenge
 
-Instructions for running the app are below. 
+This simple game will pull 10 true or false questions to answer. Your score will be displayed at the end.
+The questions are pulled from an external API on opentdb.
+Example: https://opentdb.com/api.php?amount=10&difficulty=hard&type=boolean
+
+The app also uses Redux to handle the app state such as correct answers and total questions.
+
+
+
+Instructions for running the app are below which is the same as any app created with create-react-native-app.
 
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
