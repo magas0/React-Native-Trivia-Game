@@ -1,7 +1,7 @@
-##Trivia Game Coding Challenge
+## Trivia Game Coding Challenge
 
 This simple game will pull 10 true or false questions to answer. Your score will be displayed at the end.
-The questions are pulled from an external API on opentdb.
+The questions are pulled from an external API on https://opentdb.com.
 Example: https://opentdb.com/api.php?amount=10&difficulty=hard&type=boolean
 
 The app also uses Redux to handle the app state such as correct answers and total questions.
